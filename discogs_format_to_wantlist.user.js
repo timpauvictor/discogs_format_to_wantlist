@@ -19,6 +19,8 @@ countries = [
   'Spain',
   'Austria',
   'Australia',
+  'Nigeria',
+  'USSR',
   'Australasia', //Discogs term for Australia and Asia
   'Norway',
   'Sweden',
