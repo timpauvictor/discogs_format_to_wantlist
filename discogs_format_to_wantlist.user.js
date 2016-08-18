@@ -43,6 +43,12 @@ countries = [
   'Denmark',
   'Peru',
   'Colombia',
+  'Philippines',
+  'Malaysia',
+  'Yugoslavia',
+  ''
+  'Uruguay',
+  'Singapore, Malaysia & Hong Kong',
   'Taiwan'
 ];
 function Add_Format($albumformat)
