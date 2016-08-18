@@ -41,13 +41,14 @@ countries = [
   'Mexico',
   'Chile',
   'Denmark',
-  'Peru',
-  'Colombia',
+  'Peru' ,
+  'Colombia' ,
   'Philippines',
-  'Malaysia',
+  'Malaysia' ,
   'Yugoslavia',
   'Uruguay',
-  'Singapore, Malaysia & Hong Kong',
+  'Singapore' ,
+  'Hong Kong' ,
   'Taiwan'
 ];
 function Add_Format($albumformat)
