@@ -47,7 +47,7 @@ countries = [
   'Malaysia',
   'Yugoslavia',
   'Uruguay',
-  'UK & Europe'
+  'UK & Europe',
   'Singapore',
   'Hong Kong',
   'Ireland',
