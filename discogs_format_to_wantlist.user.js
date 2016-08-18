@@ -29,6 +29,21 @@ countries = [
   'Netherlands',
   'Italy',
   'Czech Republic'
+  'Portugal'
+  'New Zealand'
+  'Turkey'
+  'South Africa'
+  'Brazil'
+  'Venezuela'
+  'Japan'
+  'Argentina'
+  'Israel'
+  'Mexico'
+  'Chile'
+  'Denmark'
+  'Peru'
+  'Colombia'
+  'Taiwan'
 ];
 function Add_Format($albumformat)
 {
