@@ -46,7 +46,6 @@ countries = [
   'Philippines',
   'Malaysia',
   'Yugoslavia',
-  ''
   'Uruguay',
   'Singapore, Malaysia & Hong Kong',
   'Taiwan'
