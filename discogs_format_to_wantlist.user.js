@@ -53,6 +53,11 @@ countries = [
   'Ecuador',
   'Guatemala',
   'Russia', 
+  'Bolivia',
+  'Switzerland',
+  'South Korea',
+  'Belgium',
+  'India',
   'Taiwan'
 ];
 function Add_Format($albumformat)
