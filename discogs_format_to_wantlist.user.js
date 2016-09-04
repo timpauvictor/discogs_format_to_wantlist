@@ -2,7 +2,7 @@
 // @require http://code.jquery.com/jquery-latest.js
 // @name         Add all format to wantlist
 // @namespace    http://dollardialup.com/
-// @version      0.5.3
+// @version      0.6
 // @description  adds buttons to discogs master release page for adding all of a certain format to your wantlist
 // @author       Alessandro Minghe Migliori, Joey Liechty, Scott Powers
 // @match        https://www.discogs.com/master/*
@@ -65,7 +65,7 @@ countries = [
   'Belarus',
   'Nicaragua',
   'Barbados',
-  'German Democratic Republic'
+  'German Democratic Republic',
   'Taiwan'
 ];
 function Add_Format($albumformat)
