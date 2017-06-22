@@ -10,9 +10,9 @@
 // @grant        none
 // ==/UserScript==
 nofilez = [
-  'File'
-  'Reel'
-  '7xFile'
+  'File',
+  'Reel',
+  '7xFile',
   '12xFile'
 ];
 countries = [
