@@ -2,7 +2,7 @@
 // @require http://code.jquery.com/jquery-latest.js
 // @name         Add all format to wantlist
 // @namespace    http://dollardialup.com/
-// @version      0.9
+// @version      0.9.1
 // @description  adds buttons to discogs master release page for adding all of a certain format to your wantlist
 // @author       Alessandro Minghe Migliori, Joey Liechty, Scott Powers
 // @match        https://www.discogs.com/master/*
@@ -65,6 +65,7 @@ countries = [
   'Belarus',
   'Nicaragua',
   'Barbados',
+  'Jamaica',
   'Taiwan'
 ];
 function Add_Format($albumformat)
@@ -76,11 +77,9 @@ function Add_Format($albumformat)
     {
       var release = $(this).closest('tr');
       countries.some(function (country) {
-        if (release.find('td.country').children('span').text().indexOf(country) >= 0) {
-          release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
-          return true;
+        release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
+        result = true;
         }
-        return false;
       });
     }
   });
@@ -135,7 +134,7 @@ $(document).ready(function () {
   for (var key in formats) {
     if (Has_Format(formats[key]['searchkey']) == true)
     {
-      $('<br \\><a style="margin-top: 5px; width: 100%;" id="' + formats[key]['id'] + '" class="button button_small">Add All ' + formats[key]['text'] + ' To Want List</a>').insertAfter('#page_aside div.section_content a.want_add_all_button');
+      $('<br \\><a style="margin-top: 5px; width: 100%;" id="' + formats[key]['id'] + '" class="button button_small">Add All ' + formats[key]['text'] + ' To Wantlist</a>').insertAfter('#page_aside div.section_content a.want_add_all_button');
       $('#' + formats[key]['id']).click(function (keyid) {
         return function ()
         {
