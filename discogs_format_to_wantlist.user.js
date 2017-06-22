@@ -2,19 +2,13 @@
 // @require http://code.jquery.com/jquery-latest.js
 // @name         Add all format to wantlist
 // @namespace    http://dollardialup.com/
-// @version      0.9.7
+// @version      0.9.8
 // @description  adds buttons to discogs master release page for adding all of a certain format to your wantlist
 // @author       Alessandro Minghe Migliori, Joey Liechty, Scott Powers
 // @match        https://www.discogs.com/master/*
 // @match        https://www.discogs.com/*/master/*
 // @grant        none
 // ==/UserScript==
-nofilez = [
-  'File',
-  'Reel',
-  '7xFile',
-  '12xFile'
-];
 countries = [
   'Europe',
   'US',
@@ -82,8 +76,8 @@ function Add_Format($albumformat)
     && $(this).text().indexOf('checazzo') == - 1)
     {
       var release = $(this).closest('tr');
-      nofilez.some(function (country) {
-        if (release.find('td.format').children('span').text().indexOf(nofilez) >= 0) {
+      countries.some(function (country) {
+        if (release.find('td.country').children('span').text().indexOf('checazzo') == -1) {
           release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
           return true;
         }
