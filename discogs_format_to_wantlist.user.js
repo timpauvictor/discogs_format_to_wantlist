@@ -76,7 +76,11 @@ function Add_Format($albumformat)
     {
       if ($(this).text().indexOf('checazzo') == - 1)
       {
+              var release = $(this).closest('tr');
+      countries.some(function (country) {
+        release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
        result = true;
+        }
       }
     }
   });
@@ -91,7 +95,6 @@ function Has_Format($albumformat)
     {
       if ($(this).text().indexOf('checazzo') == - 1)
       {
-       release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
        result = true;
       }
     }
