@@ -73,15 +73,19 @@ function Add_Format($albumformat)
   $('#main_wrapper #page #versions tr td span.format').each(function ()
   {
     if ($(this).text().indexOf($albumformat) > - 1
-    && $(this).text().indexOf('Unofficial') == - 1)
+    && $(this).text().indexOf('checazzo') == - 1)
     {
       var release = $(this).closest('tr');
       countries.some(function (country) {
+        if (release.find('td.country').children('span').text().indexOf('checazzo') == -1) {
           release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
-      }
+          return true;
+        }
+        return false;
+      });
     }
-  }
-}                     
+  });
+}
 function Has_Format($albumformat)
 {
   result = false;
