@@ -2,7 +2,7 @@
 // @require http://code.jquery.com/jquery-latest.js
 // @name         Add all format to wantlist
 // @namespace    http://dollardialup.com/
-// @version      0.9.4
+// @version      0.9.5
 // @description  adds buttons to discogs master release page for adding all of a certain format to your wantlist
 // @author       Alessandro Minghe Migliori, Joey Liechty, Scott Powers
 // @match        https://www.discogs.com/master/*
@@ -70,23 +70,22 @@ countries = [
 ];
 function Add_Format($albumformat)
 {
-  result = false;
-  $('#main_wrapper #page #versions tr td span.format').each(function () {
-      if ($(this).text().indexOf($albumformat) > - 1)
+  $('#main_wrapper #page #versions tr td span.format').each(function ()
+  {
+    if ($(this).text().indexOf($albumformat) > - 1
+    && $(this).text().indexOf('Unofficial') == - 1)
     {
-      if ($(this).text().indexOf('checazzo') == - 1)
-      {
-              var release = $(this).closest('tr');
+      var release = $(this).closest('tr');
       countries.some(function (country) {
-        release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
-       result = true;
+        if ($(this).text().indexOf($albumformat) > - 1) {
+          release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
+          return true;
         }
-      }
+        return false;
+      });
     }
   });
-  return result;
-}
-                     
+}                     
 function Has_Format($albumformat)
 {
   result = false;
