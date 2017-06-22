@@ -2,7 +2,7 @@
 // @require http://code.jquery.com/jquery-latest.js
 // @name         Add all format to wantlist
 // @namespace    http://dollardialup.com/
-// @version      0.9.1
+// @version      0.9.2
 // @description  adds buttons to discogs master release page for adding all of a certain format to your wantlist
 // @author       Alessandro Minghe Migliori, Joey Liechty, Scott Powers
 // @match        https://www.discogs.com/master/*
@@ -80,9 +80,9 @@ function Add_Format($albumformat)
         release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
         result = true;
         }
-      });
+      }
     }
-  });
+  }
 }
 function Has_Format($albumformat)
 {
