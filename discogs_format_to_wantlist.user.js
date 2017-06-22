@@ -9,6 +9,12 @@
 // @match        https://www.discogs.com/*/master/*
 // @grant        none
 // ==/UserScript==
+nofilez = [
+  'File'
+  'Reel'
+  '7xFile'
+  '12xFile'
+];
 countries = [
   'Europe',
   'US',
@@ -76,8 +82,8 @@ function Add_Format($albumformat)
     && $(this).text().indexOf('checazzo') == - 1)
     {
       var release = $(this).closest('tr');
-      countries.some(function (country) {
-        if (release.find('td.country').children('span').text().indexOf('checazzo') == -1) {
+      nofilez.some(function (country) {
+        if (release.find('td.format').children('span').text().indexOf(nofilez) >= 0) {
           release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
           return true;
         }
