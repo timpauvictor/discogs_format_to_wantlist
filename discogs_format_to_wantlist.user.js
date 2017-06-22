@@ -83,7 +83,8 @@ function Add_Format($albumformat)
       }
     }
   }
-}
+}; 
+                     
 function Has_Format($albumformat)
 {
   result = false;
