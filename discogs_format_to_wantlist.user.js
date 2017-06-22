@@ -83,7 +83,7 @@ function Add_Format($albumformat)
     {
       var release = $(this).closest('tr');
       nofilez.some(function (country) {
-        if (release.find('td.format').children('span').text().indexOf(nofilez) >= 0) {
+        if (release.find('td.format').children('span').text().indexOf(nofilez) == - 1) {
           release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
           return true;
         }
