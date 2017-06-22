@@ -78,9 +78,9 @@ function Add_Format($albumformat)
       var release = $(this).closest('tr');
       countries.some(function (country) {
           release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
-      });
+      }
     }
-  });
+  }
 }                     
 function Has_Format($albumformat)
 {
