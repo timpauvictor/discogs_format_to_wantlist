@@ -81,6 +81,7 @@ function Add_Format($albumformat)
           //log release data
           console.log(release)
           console.log("clicking button")
+          //fixed
           release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
           return true;
         }
