@@ -77,8 +77,10 @@ function Add_Format($albumformat)
     {
       var release = $(this).closest('tr');
       countries.some(function (country) {
-        if (release.find('td.country').children('span').text().indexOf('checazzo') == - 1) {
+        if (release.find('td.country').children('span').text().indexOf('Unofficial') == - 1) {
+          //log release data
           console.log(release)
+          console.log("clicking button"
           release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
           return true;
         }
