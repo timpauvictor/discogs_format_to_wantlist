@@ -73,7 +73,7 @@ function Add_Format($albumformat)
   $('#main_wrapper #page #versions tr td span.format').each(function ()
   {
     if ($(this).text().indexOf($albumformat) > - 1
-    && $(this).text().indexOf('checazzo') == - 1)
+    && $(this).text().indexOf('Unofficial') == - 1)
     {
       var release = $(this).closest('tr');
       countries.some(function (country) {
