@@ -80,7 +80,7 @@ function Add_Format($albumformat)
         if (release.find('td.country').children('span').text().indexOf('Unofficial') == - 1) {
           //log release data
           console.log(release)
-          console.log("clicking button"
+          console.log("clicking button")
           release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
           return true;
         }
