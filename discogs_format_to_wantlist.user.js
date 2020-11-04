@@ -78,6 +78,7 @@ function Add_Format($albumformat)
       var release = $(this).closest('tr');
       countries.some(function (country) {
         if (release.find('td.country').children('span').text().indexOf('checazzo') == - 1) {
+          Console.log(release)
           release.find('td.actions li.add_to_wantlist').trigger('mouseover').trigger('click');
           return true;
         }
